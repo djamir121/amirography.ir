@@ -1,0 +1,28 @@
+name: Extract Zip File
+
+on:
+  push:
+    paths:
+      - '**.zip' # هر زمان فایل زیپ جدیدی پوش شود این اسکریپت اجرا می‌شود
+
+jobs:
+  unzip:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Extract zip files
+      run: |
+        # پیدا کردن و اکسترکت کردن تمام فایل‌های زیپ در پوشه مشخص شده
+        find . -name "*.zip" -exec unzip -o {} -d ./extracted/ \;
+        
+        # اگر خواستید فایل زیپ اصلی بعد از اکسترکت حذف شود این خط را فعال کنید
+        # rm *.zip
+
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "Auto-extract zip files"
+        branch: main
+        
