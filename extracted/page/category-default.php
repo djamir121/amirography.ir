@@ -1,0 +1,37 @@
+<?php get_header(); ?>
+<?php get_template_part('includes/breadcrumbs'); ?>
+<div class="index">
+<div class="main">
+<div class="twoSlider">
+<div class="main-3">
+<div class="main-3-right">
+<div class="single">
+<div class="sliderPage-1">
+<article id="post">
+<div class="boxe_title">
+<h2 style="font:bold 8pt Tahoma, Geneva, sans-serif;"><strong><?php the_archive_title(); ?></strong></h2>
+</div>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php get_template_part('loop'); ?>
+<?php endwhile; endif; ?>
+<div class="pagination"><?php qaleb_pagination(); ?></div>
+</article>
+</div>
+</div>
+
+</div>
+<div class="sliderPage-2">
+<div class="main-3-middle">
+<?php get_template_part('includes/main-3-middle'); ?>
+</div>
+</div>
+<div class="sliderPage-3">
+<div class="main-3-left">
+<?php get_template_part('includes/main-3-left'); ?>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<?php get_footer(); ?>

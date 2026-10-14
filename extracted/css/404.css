@@ -1,0 +1,269 @@
+/*-----------------------------------------------------------------------------------
+	theme name: 404 eror theme series 6 (Broken page)
+	designer name: کلکسیون طراحی
+	designer web: http://wp-qaleb.ir
+-------------------------------------------------------------------------------------*/
+@font-face {font-family:'IRANSansWeb_Medium';src:url('../fonts/IRANSansWeb_Medium.eot?#') format('eot'),  /* IE6–8 */url('../fonts/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/url('../fonts/IRANSansWeb_Medium.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */}
+
+html,body,input{
+	margin:0;padding:0;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+body{
+	font-family: 'IRANSansWeb_Medium', Arial, Tahoma;
+	font-size:14px;
+	background:url(../images/pattern-1.jpg);
+}
+
+
+/* :::::::::::::::::::::::::: Transition ::::::::::::::::::::::::: */
+/* add elements that need CSS3 transition here*/
+a,
+.yes,
+.goto,
+.no,
+.top,
+.search-field,#search form{
+	-moz-transition:all 0.5s ease 0s;
+	-webkit-transition:all 0.5s ease 0s;
+	transition:all 0.5s ease 0s;
+}
+
+/* ::: END ------------------ Transition --------------------------- */
+
+
+/* :::::::::::::::::::::::::: Header ::::::::::::::::::::::::: */
+
+#header{
+	text-align:center;
+	min-height:55%;
+	height:55%;
+}
+#header h1{
+	font-size:25px;
+	font-family:'IRANSansWeb_Medium', Arial, Tahoma;
+	margin-top:30px;
+	color:#000;
+}
+
+.texts{
+	display: inline-block;
+	vertical-align: middle;
+	height:50%;
+	width:100%;
+}
+.vadjust:before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height:25%;
+}
+.vadjust{
+	height:30;
+}
+
+/* ::: END ------------------ Header --------------------------- */
+
+/* :::::::::::::::::::::::::: Content ::::::::::::::::::::::::: */
+#content{
+	min-height:45%;
+	height:50%;
+	background:#1b1b1b;
+	border-top:5px solid #266a9b;
+	width:100%;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;font-size:20px;
+}
+		/* :::::::::::::::::: Questions :::::::::::::::::::::::: */
+			.valign:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height:45%;
+			}
+			.valign{
+				height:10%;
+			}
+			.question-holder{
+				display: inline-block;
+				vertical-align: middle;
+				color:#fff;
+				border-top:0px solid #aaa;
+				height:50%;
+				width:100%;
+				
+			}
+			.question-title{
+				font-family:'IRANSansWeb_Medium', Arial, Tahoma;
+				font-size:25px;
+				clear:both;
+				padding-bottom:25px;
+				border-bottom:0px solid #fff;
+				text-align:center;
+			}
+			.questions{
+				height:120px;
+				overflow:hidden;
+				padding:15px 0;
+			}
+			.question{
+				height:120px;
+				margin:15px 0; 
+			}
+			.q{
+				width:100%;
+				margin-bottom:30px;
+				text-align:center;
+				clear:both;
+			}
+			.answerbtn{
+				width:300px;
+				margin:0 auto;
+			}
+			.yes,
+			.no,
+			.top{
+				width:100px;
+				padding:5px 20px;
+				margin:10px 5px;
+				cursor:pointer;
+				float:left;
+				text-align:center;
+			}
+			.goto{
+				padding:5px 20px;
+				margin:10px 5px;
+				cursor:pointer;
+				text-align:center;
+				float:none;
+			}
+			.top{
+				float:none;
+				margin:0 auto !important;
+			}
+			.no,
+			.top,
+			.yes,
+			.goto{
+				color:#fff;
+				background:#D50404;
+				border-bottom:4px solid #A40303;
+				border-radius:5px;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				-o-border-radius:5px;
+			}
+			.yes:hover,
+			.goto:hover,
+			.no:hover,
+			.top:hover{
+				background:#A40303;
+				color:#fff;
+			}
+			.goto,.top{
+				cursor:auto;
+			}
+			.back,.top{
+				cursor:pointer;
+			}
+			#target a,
+			#target a:visited{
+				color:#000;
+			}
+			#target a:hover{
+				color:#fff;
+			}
+			
+
+			/* ::: END ------------------ Questions ------------- */
+/* ::: END ------------------ Content --------------------------- */
+
+
+/* :::::::::::::::::::::::::: Responsive layout ::::::::::::::::::::::::: */
+	
+
+
+	/* :::::::::::::::::::::::::: All Mobile Sizes (devices and browser) / all under Tablet */
+
+		@media only screen and (max-width: 767px) {
+			#search form{
+				margin:0 5%;
+				width: 90%;
+			}	
+		}
+	
+	/* :::::::::::::::::::::::::: Mobile Portrait Size to Mobile Landscape Size (devices and browsers) 3. Step */
+	
+		@media only screen and (max-width: 479px) {
+			#header h1{
+				font-size:20px;
+			}
+			#header p{
+				font-size:13px;
+			}
+			#content{
+				height:50%;
+			}
+			#search form{
+				margin:0 5%;
+				width: 90%;
+			}
+			.q{
+				font-size:13px;
+			}
+
+			.question-title{
+				font-size:18px;
+			}
+		}
+	/* :::::::::::::::::::::::::: Mobile Landscape Size to Tablet Portrait (devices and browsers) 2. Step */
+		@media only screen and (max-height: 480px) {
+				#header{
+					min-height:100%;
+					height:100%;
+				}
+				#content{
+					height:100%;
+				}
+
+				.question-title{
+					font-size:22px;
+				}
+		}
+	
+		
+	/* :::::::::::::::::::::::::: For devies that have height < 600px */
+	
+		@media only screen and (min-height: 700px) {
+			.vadjust:before{
+				height:50%;
+				}
+		}
+	
+/* ::: END ------------------ Responsive Layout --------------------------- */
+	
+	
+.social  {display:block;font-size:13px;overflow:hidden;position:relative;height:atuo;width:100%;float:left;}
+ul.social {list-style:none;text-align:center;width:95%;}
+ul.social > li {width:20px;height:20px;display:inline-block;padding:0 0px;}
+ul.social > li a {display:block;width:20px;height:20px;margin-top:7px;overflow:hidden;-webkit-transition:background 0.5s;-moz-transition:background 0.5s;-o-transition:background 0.5s;-ms-transition:background 0.5s;transition:background 0.5s;text-indent:-999px;}
+.twitter {background:url(../images/social-icon/twitter-icon.png);transition:all 0.4s ease 0.1s;opacity:0.5;}
+.twitter:hover {opacity:0.9;}
+.facebook {background:url(../images/social-icon/fb-icon.png);transition:all 0.4s ease 0.1s;opacity:0.5;}
+.facebook:hover {opacity:0.9;}
+.Instagram {background:url(../images/social-icon/Instagram-icon.png);transition:all 0.4s ease 0.1s;opacity:0.5;}
+.Instagram:hover {opacity:0.9;}
+.rss {background:#ED720D url(../images/social-icon/rss.png);opacity:0.5;}
+.rss:hover {transition:all 0.4s ease 0.1s;opacity:0.9;}
+.telegram {background:#27A5DC url(../images/social-icon/telegram.png);transition:all 0.4s ease 0.1s;opacity:0.5;}
+.telegram:hover {opacity:0.9;}
+.aparat{background:#FFFFFF url(../images/social-icon/aparat.png);transition:all 0.4s ease 0.1s;opacity:0.5;}
+.aparat:hover {opacity:0.9;}
+.home{background:#D71920 url(../images/social-icon/home.png);transition:all 0.4s ease 0.1s;opacity:0.5;}
+.home:hover {opacity:0.9;}
+		
+	
